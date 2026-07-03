@@ -1,0 +1,36 @@
+.contact {
+  padding: 80px 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.contact p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contact-btn {
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  transition: all 0.2s ease;
+}
+
+.contact-btn:hover {
+  border-color: var(--text-h);
+  background: rgba(255, 255, 255, 0.05);
+}
