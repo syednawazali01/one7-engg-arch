@@ -1,16 +1,74 @@
-# React + Vite
+# One7 Engg & Arch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive website for One7 Engg & Arch, built with React and Vite. It introduces the studio and provides dedicated pages for its portfolio, services, and contact information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive layouts for desktop and mobile
+- Home, Portfolio, Services, and Contact pages
+- Client-side navigation with React Router
+- Portfolio cards driven by project data
+- Contact links to Instagram and Gmail compose
+- Dark visual theme with Jost headings and Inter body text
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Requirements
 
-## Expanding the ESLint configuration
+- Node.js
+- npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Install and run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite in your terminal (usually `http://localhost:5173`).
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server with hot reloading |
+| `npm run build` | Create an optimized production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+To preview a production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Pages
+
+| Path | Page |
+| --- | --- |
+| `/` | Home |
+| `/portfolio` | Portfolio |
+| `/services` | Services |
+| `/contact` | Contact |
+
+## Project structure
+
+```text
+src/
+├── assets/       # Images and bundled assets
+├── components/   # Shared page components and their styles
+├── data/         # Portfolio project data
+├── pages/        # Route-level page components
+├── App.jsx       # Routes and shared page layout
+└── main.jsx      # React application entry point
+public/           # Static files served as-is
+```
+
+## Updating portfolio projects
+
+Edit the `projects` array in [`src/data/projects.js`](src/data/projects.js). Each entry includes an `id`, `title`, `category`, and `image` path. Public image paths should point to files under `public/`; for example, `/projects/example.jpg` refers to `public/projects/example.jpg`. Replace the current sample entries and add the corresponding image files.
+
+## Contact links
+
+The contact page links to the studio's Instagram profile and opens Gmail compose addressed to `ar208213@gmail.com`. These links are configured in [`src/components/Contact.jsx`](src/components/Contact.jsx).
