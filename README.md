@@ -43,6 +43,12 @@ npm run build
 npm run preview
 ```
 
+## Deploying to GitHub Pages
+
+The GitHub Actions workflow in `.github/workflows/deploy.yml` builds and deploys the site when changes are pushed to `main`. In the repository settings, open **Pages** and set the build and deployment source to **GitHub Actions**. After that, each successful workflow run publishes the site to:
+
+`https://syednawazali01.github.io/one7-engg-arch/`
+
 ## Pages
 
 | Path | Page |
